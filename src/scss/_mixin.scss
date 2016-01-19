@@ -1,0 +1,33 @@
+// mixin
+
+// Clearfix
+@mixin clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// Image Replacing
+@mixin ir() {
+  white-space: nowrap;
+  text-indent: 101%;
+  overflow: hidden;
+}
+
+
+// MediaQueries
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+@mixin min-screen($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+@mixin screen($break-point-min, $break-point-max) {
+  @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+    @content;
+  }
+}
