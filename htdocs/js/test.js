@@ -1,0 +1,1 @@
+!function(o,e){o.document&&console.log("test"),e&&console.log(e("body").text())}(window,jQuery);

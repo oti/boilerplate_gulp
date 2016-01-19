@@ -1,0 +1,45 @@
+/* 🍜 */
+
+:root {
+	font-size: 16px;
+}
+
+html {
+	font-family: sans-serif;
+}
+
+body {
+	color: #333;
+	font-size: 1rem;
+}
+
+@media screen and (max-width: 64rem) {
+
+html {
+	background-color: gold;
+}
+
+}
+
+@media screen and (max-width: 48rem) {
+
+html {
+	background-color: skybule;
+}
+
+}
+
+@media screen and (max-width: 30rem) {
+
+html {
+	background-color: tomato;
+}
+
+body {
+	font-size: 0.875rem;
+}
+
+}
+
+
+/*# sourceMappingURL=style.css.map */

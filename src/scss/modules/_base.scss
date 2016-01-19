@@ -21,7 +21,6 @@ html {
 body {
   color: map-get($colors, base);
   font-size: map-get($sizes, medium);
-
   @include max-screen($screen-phone) {
     font-size: map-get($sizes, small)
   }
