@@ -2,11 +2,15 @@
 
 ウェブサイト作るときによくある自動化タスクをプリセットしたスタートキット。
 
+これですべてができるというものではなくて、これをベースにタスクを足したり引いたりして使う用のもの。
+
 これをクローンして `.git` 以外をプロジェクトルートにコピーし、新たに `git init` して使う。
 
 ## HTML
 
 Jadeを使用。
+
+- [gulp-jade](https://www.npmjs.com/package/gulp-jade)
 
 ```
 gulp jade
@@ -14,10 +18,11 @@ gulp jade
 
 ## CSS
 
-Scssを使用。
+プリルロセッサーはSassを使用。Autoprefixerで下位ブラウザ対応。gulp-merge-media-queriesでMedia Queriesの記述をファイルの後ろにまとめている。
 
-- Autprefixer
-- Combine Media Queries(node v4で動かないので実際に使っているのはgulp-merge-media-queries)
+- [gulp-sass](https://www.npmjs.com/package/gulp-sass)
+- [gulp-autprefixer](https://www.npmjs.com/package/gulp-autoprefixer)
+- [gulp-merge-media-queries](https://www.npmjs.com/package/gulp-merge-media-queries)
 
 ```
 gulp sass
@@ -29,9 +34,10 @@ gulp sass
 
 jQueryなどのライブラリは `src/js/vendor/` に格納し、`htdocs/js/vendor.js` に結合圧縮される想定。自分で書いたJSは圧縮だけして個別に出力する。
 
-- concat
-- uglify
-- JSHint
+- [gulp-concat](https://www.npmjs.com/package/gulp-concat)
+- [gulp-uglify](https://www.npmjs.com/package/gulp-uglify)
+- [gulp-jshint](https://www.npmjs.com/package/gulp-jshint)
+- [jshint-stylish](https://github.com/sindresorhus/jshint-stylish)
 
 ```
 gulp jsVendor // -> build vendor.js
@@ -42,7 +48,7 @@ gulp js // -> build your custom js
 
 `src/img/` 配下をすべて個別に圧縮して `htdocs/img/` に出力する。
 
-- imagemin
+- [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin)
 
 ```
 gulp imagemin
@@ -52,6 +58,8 @@ gulp imagemin
 
 browser-sync使用。でローカルサーバー起動とライブリロード
 
+- [brower-sync](https://www.npmjs.com/package/browser-sync)
+
 ```
 gulp server
 ```
@@ -59,6 +67,8 @@ gulp server
 ## 監視
 
 gulp-watch使用。
+
+- [gulp-watch](https://www.npmjs.com/package/gulp-watch)
 
 ```
 gulp watch
@@ -72,7 +82,7 @@ jade, scssコンパイルとjs, imgの圧縮だけするタスク
 gulp build
 ```
 
-## はじめるには
+## npm run script
 
 ```
 npm start
