@@ -25,12 +25,13 @@ gulp sass
 
 ## JS
 
-中間言語なし。
+中間言語なし。JSHintで構文チェック。ターミナルの整形ツールにjshint-stylishを使っている。
 
 jQueryなどのライブラリは `src/js/vendor/` に格納し、`htdocs/js/vendor.js` に結合圧縮される想定。自分で書いたJSは圧縮だけして個別に出力する。
 
 - concat
 - uglify
+- JSHint
 
 ```
 gulp jsVendor // -> build vendor.js
