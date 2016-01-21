@@ -3,7 +3,9 @@
 // load plugins
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
+var connect = require('gulp-connect-php');
 var jade = require('gulp-jade');
+var jadePhp = require('gulp-jade-php');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var cmq = require('gulp-merge-media-queries');
@@ -22,7 +24,7 @@ var config  = require('./config.json', 'utf8');
 
 
 // server & browser sync
-gulp.task('server', function() {
+gulp.task('bs', function() {
   browserSync({
     server: {
       baseDir: config.dist,
@@ -31,10 +33,40 @@ gulp.task('server', function() {
   });
 });
 
+// php browser sync
+gulp.task('bs:php', function() {
+  browserSync.init(null, {
+    proxy: 'localhost:1234'
+  });
+});
+
+// browser sync reload
+gulp.task('reload', function(){
+  browserSync.reload();
+});
+
+// php server
+gulp.task('server:php', function() {
+  connect.server({
+    port: 1234,
+    base: config.dist
+  });
+});
+
 // Jade
 gulp.task('jade', function() {
-  return gulp.src(config.src + 'jade/*.jade')
+  return gulp.src(config.src + 'jade/**/!(_)*.jade')
     .pipe(jade({
+      pretty: true
+    }))
+    .pipe(gulp.dest(config.dist))
+    .pipe(browserSync.stream());
+});
+
+// Jade-PHP
+gulp.task('jade:php', function() {
+  return gulp.src(config.src + 'jade-php/**/!(_)*.jade')
+    .pipe(jadePhp({
       pretty: true
     }))
     .pipe(gulp.dest(config.dist))
@@ -103,7 +135,11 @@ gulp.task('copy:font', function() {
 // watch
 gulp.task('watch', function() {
   watch([config.src + 'jade/**/*.jade'], function(e) {
-    gulp.start(['jade']);
+    gulp.start(['jade', 'reload']);
+  });
+
+  watch([config.src + 'jade-php/**/*.jade'], function(e) {
+    gulp.start(['jade:php', 'reload']);
   });
 
   watch([config.src + 'js/*.js'], function(e) {
@@ -137,5 +173,10 @@ gulp.task('build', function(callback) {
 // default
 //  - local development task
 gulp.task('default', function(callback) {
-  runSequence(['build', 'server', 'watch'], callback);
+  runSequence(['build', 'bs', 'watch'], callback);
+});
+
+// default(use php)
+gulp.task('default', function(callback) {
+  runSequence(['build', 'server:php', 'bs:php', 'watch'], callback);
 });
