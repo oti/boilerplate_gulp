@@ -166,7 +166,11 @@ gulp.task('watch', function() {
 
 // build
 // - only compile
-gulp.task('build', function(callback) {
+gulp.task('build:html', function(callback) {
+  runSequence(['jade', 'sass', 'imagemin', 'copy:font', 'jsVendor', 'js'], callback);
+});
+
+gulp.task('build:php', function(callback) {
   runSequence(['jade', 'sass', 'imagemin', 'copy:font', 'jsVendor', 'js'], callback);
 });
 
@@ -177,6 +181,6 @@ gulp.task('default', function(callback) {
 });
 
 // default(use php)
-gulp.task('default', function(callback) {
+gulp.task('default:php', function(callback) {
   runSequence(['build', 'server:php', 'bs:php', 'watch'], callback);
 });
