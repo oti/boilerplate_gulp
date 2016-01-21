@@ -16,6 +16,18 @@ Jadeを使用。
 gulp jade
 ```
 
+## PHP
+
+Jadeを使用。
+
+- [gulp-jade-php](https://www.npmjs.com/package/gulp-jade-php)
+
+jadeファイルに書けるJS記述がphp記述にコンパイルされるので、それに注意。
+
+```
+gulp jade:php
+```
+
 ## CSS
 
 プリルロセッサーはSassを使用。Autoprefixerで下位ブラウザ対応。gulp-merge-media-queriesでMedia Queriesの記述をファイルの後ろにまとめている。
@@ -79,7 +91,15 @@ gulp watch
 jade, scssコンパイルとjs, imgの圧縮だけするタスク
 
 ```
-gulp build
+gulp build:html // -> html利用時
+gulp build:php // -> php利用時
+```
+
+build:* とbrowser-syncとwatch
+
+```
+gulp default // -> html利用時
+gulp default:php // -> php利用時
 ```
 
 ## npm run script
@@ -88,4 +108,4 @@ gulp build
 npm start
 ```
 
-呼び出しているのは `gulp default` タスクで、`gulp build`、`gulp server`、`gulp watch`を実行している。
+呼び出しているのは `gulp default` タスク。
