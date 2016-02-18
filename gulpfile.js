@@ -92,7 +92,9 @@ gulp.task('js', function() {
     .pipe(sourcemaps.init())
     .pipe(jshint())
     .pipe(jshint.reporter(stylish))
-    .pipe(uglify())
+    .pipe(uglify({
+      preserveComments: 'some'
+    }))
     .pipe(gulp.dest(config.dist + 'js/'))
     .pipe(sourcemaps.write('./'))
     .pipe(browserSync.stream());
