@@ -30,7 +30,7 @@ gulp jade:php
 
 ## CSS
 
-プリルロセッサーはSassを使用。Autoprefixerで下位ブラウザ対応。gulp-merge-media-queriesでMedia Queriesの記述をファイルの後ろにまとめている。
+プリプロセッサーはSassを使用。Autoprefixerで下位ブラウザ対応。gulp-merge-media-queriesでMedia Queriesの記述をファイルの後ろにまとめている。
 
 - [gulp-sass](https://www.npmjs.com/package/gulp-sass)
 - [gulp-autprefixer](https://www.npmjs.com/package/gulp-autoprefixer)
