@@ -1,0 +1,13 @@
+{
+  "eqeqeq": true,
+  "quotmark": "single",
+  "undef": true,
+  "unused": true,
+  "strict": true,
+  "camelcase": true,
+  "forin": true,
+  "freeze": true,
+  "trailing": true,
+  "maxparams": 4,
+  "maxdepth": 3
+}
