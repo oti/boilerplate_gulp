@@ -1,9 +1,11 @@
+/*! @license */
 /* comments */
-(function(w, $){
-  if (w.document) {
-    console.log('test');
+(function(window, $, undefined){
+  'use strict';
+  if (window) {
+    window.console.log('test');
   }
   if($) {
-    console.log($('body').text());
+    window.console.log($('body').text());
   }
-})(window, jQuery);
+})(this, this.jQuery);
