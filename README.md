@@ -99,7 +99,7 @@ build:* とbrowser-syncとwatch
 
 ```
 gulp default // -> html利用時
-gulp default:php // -> php利用時
+gulp php // -> php利用時
 ```
 
 ## npm run script
