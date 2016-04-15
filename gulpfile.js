@@ -28,7 +28,7 @@ gulp.task('bs', function() {
   browserSync({
     server: {
       baseDir: config.dist,
-      proxy: config.proxy
+      proxy: 'localhost:'+config.port
     }
   });
 });
@@ -36,7 +36,7 @@ gulp.task('bs', function() {
 // php browser sync
 gulp.task('bs:php', function() {
   browserSync.init(null, {
-    proxy: 'localhost:1234'
+    proxy: 'localhost:'+config.port
   });
 });
 
@@ -48,7 +48,7 @@ gulp.task('reload', function(){
 // php server
 gulp.task('server:php', function() {
   connect.server({
-    port: 1234,
+    port: config.port,
     base: config.dist
   });
 });
@@ -173,7 +173,7 @@ gulp.task('build:html', function(callback) {
 });
 
 gulp.task('build:php', function(callback) {
-  runSequence(['jade', 'sass', 'imagemin', 'copy:font', 'jsVendor', 'js'], callback);
+  runSequence(['jade:php', 'sass', 'imagemin', 'copy:font', 'jsVendor', 'js'], callback);
 });
 
 // default
@@ -183,6 +183,6 @@ gulp.task('default', function(callback) {
 });
 
 // default(use php)
-gulp.task('default:php', function(callback) {
+gulp.task('php', function(callback) {
   runSequence(['build', 'server:php', 'bs:php', 'watch'], callback);
 });
