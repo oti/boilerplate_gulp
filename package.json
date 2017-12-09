@@ -1,26 +1,50 @@
 {
-  "private": true,
-  "devDependencies": {
-    "browser-sync": "^2.10.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-connect-php": "0.0.7",
-    "gulp-imagemin": "^2.4.0",
-    "gulp-jade": "^1.1.0",
-    "gulp-jade-php": "^1.1.0",
-    "gulp-jshint": "^2.0.0",
-    "gulp-merge-media-queries": "^0.2.1",
-    "gulp-plumber": "^1.0.1",
-    "gulp-sass": "^2.1.1",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-uglify": "^1.5.1",
-    "gulp-watch": "^4.3.5",
-    "jshint": "^2.9.1",
-    "jshint-stylish": "^2.1.0",
-    "run-sequence": "^1.1.5"
-  },
+  "name": "website-dev-startkit",
+  "version": "2.0.0",
+  "description": "",
+  "main": "gulpfile.babel.js",
   "scripts": {
-    "start": "gulp"
-  }
+    "start": "concurrently \"npm run gulp\" \"npm run babelify\"",
+    "gulp": "gulp",
+    "babelify": "watchify ./src/script/script.js -t babelify -o 'exorcist ./dist/script/script.js.map > ./dist/script/script.js' -d -v"
+  },
+  "author": {
+    "name": "Yoshiaki Ito",
+    "email": "ito@maboroshi.biz",
+    "url": "https://maboroshi.biz/staff/ito.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "babelify": "^8.0.0",
+    "browser-sync": "^2.18.13",
+    "concurrently": "^3.5.1",
+    "exorcist": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-filter": "^5.0.1",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1",
+    "run-sequence": "^2.2.0",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {}
 }

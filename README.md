@@ -8,43 +8,30 @@
 
 ## HTML
 
-Jadeを使用。
+Pugを使用。
 
-- [gulp-jade](https://www.npmjs.com/package/gulp-jade)
-
-```
-gulp jade
-```
-
-## PHP
-
-Jadeを使用。
-
-- [gulp-jade-php](https://www.npmjs.com/package/gulp-jade-php)
-
-jadeファイルに書けるJS記述がphp記述にコンパイルされるので、それに注意。
+- [gulp-pug](https://www.npmjs.com/package/gulp-pug)
 
 ```
-gulp jade:php
+gulp html
 ```
 
 ## CSS
 
-プリプロセッサーはSassを使用。Autoprefixerで下位ブラウザ対応。gulp-merge-media-queriesでMedia Queriesの記述をファイルの後ろにまとめている。
+プリプロセッサーはSassを使用。Autoprefixerで下位ブラウザ対応。gulp-merge-media-queriesでMedia Queriesの記述をファイルの後ろにまとめている。最後にgulp-cssoで圧縮。
 
 - [gulp-sass](https://www.npmjs.com/package/gulp-sass)
 - [gulp-autprefixer](https://www.npmjs.com/package/gulp-autoprefixer)
 - [gulp-merge-media-queries](https://www.npmjs.com/package/gulp-merge-media-queries)
+- [gulp-csso](https://www.npmjs.com/package/gulp-csso)
 
 ```
-gulp sass
+gulp style
 ```
 
-## JS
+## JS（vendor）
 
-中間言語なし。JSHintで構文チェック。ターミナルの整形ツールにjshint-stylishを使っている。
-
-jQueryなどのライブラリは `src/js/vendor/` に格納し、`htdocs/js/vendor.js` に結合圧縮される想定。自分で書いたJSは圧縮だけして個別に出力する。
+jQueryやLodash.jsなどのライブラリは `src/js/vendor/` に格納し、`dist/js/vendor.js` に結合圧縮される想定。
 
 - [gulp-concat](https://www.npmjs.com/package/gulp-concat)
 - [gulp-uglify](https://www.npmjs.com/package/gulp-uglify)
@@ -52,8 +39,22 @@ jQueryなどのライブラリは `src/js/vendor/` に格納し、`htdocs/js/ven
 - [jshint-stylish](https://github.com/sindresorhus/jshint-stylish)
 
 ```
-gulp jsVendor // -> build vendor.js
-gulp js // -> build your custom js
+gulp jsVendors // -> build vendor.js
+```
+
+## JS（BabelJS）
+
+ES6構文で書くJSはbabelifyでbundleする。監視はwatchify。このタスクのみnpm run-scriptで行う。
+
+- babel
+- babel-core
+- babel-preset-env
+- babelify
+- watchify
+- exorcist
+
+```
+npm run babelify // -> build script.js
 ```
 
 ## img
@@ -63,7 +64,7 @@ gulp js // -> build your custom js
 - [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin)
 
 ```
-gulp imagemin
+gulp image
 ```
 
 ## ローカルサーバー
@@ -88,18 +89,10 @@ gulp watch
 
 ## ビルド
 
-jade, scssコンパイルとjs, imgの圧縮だけするタスク
+pug,scss,js,image
 
 ```
-gulp build:html // -> html利用時
-gulp build:php // -> php利用時
-```
-
-build:* とbrowser-syncとwatch
-
-```
-gulp default // -> html利用時
-gulp php // -> php利用時
+gulp build
 ```
 
 ## npm run script

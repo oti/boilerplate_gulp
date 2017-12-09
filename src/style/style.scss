@@ -1,0 +1,17 @@
+@charset 'UTF-8';
+
+// scssコンパイル用メタファイル
+@import 'config/var';
+@import 'config/placeholder';
+@import 'config/mixin';
+
+// バナー
+@import 'config/banner';
+
+// 男は黙ってMinimum Reset CSS
+@import 'foundation/reset';
+
+// 下地
+@import 'foundation/base';
+
+// モジュールたち

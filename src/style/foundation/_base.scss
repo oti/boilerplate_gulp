@@ -1,0 +1,45 @@
+:root {
+  font-size: 10px;
+}
+
+html{
+}
+
+body {
+}
+
+main {
+  display: block;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0 none;
+  text-decoration: none;
+  vertical-align: top;
+  background: transparent;
+}
+
+mark {
+  background-color: transparent;
+}
+
+a {
+  &:link {
+    text-decoration: none;
+  }
+
+  &:visited {
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+  }
+
+  &:focus {
+    text-decoration: underline;
+  }
+}

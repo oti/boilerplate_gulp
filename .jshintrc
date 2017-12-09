@@ -1,9 +1,9 @@
 {
+  "esversion": 6,
   "eqeqeq": true,
   "quotmark": "single",
   "undef": true,
   "unused": true,
-  "strict": true,
   "camelcase": true,
   "forin": true,
   "freeze": true,
