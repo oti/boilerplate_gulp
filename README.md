@@ -52,9 +52,16 @@ ES6構文で書くJSはbabelifyでbundleする。監視はwatchify。このタ�
 - babelify
 - watchify
 - exorcist
+- uglify-js
 
 ```
-npm run babelify // -> build script.js
+npm run watchify
+```
+
+圧縮ビルドはwatchifyを通さずにやる
+
+```
+npm run browserify
 ```
 
 ## img

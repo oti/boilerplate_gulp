@@ -1,12 +1,13 @@
 {
   "name": "website-dev-startkit",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "",
   "main": "gulpfile.babel.js",
   "scripts": {
-    "start": "concurrently \"npm run gulp\" \"npm run babelify\"",
+    "start": "concurrently \"npm run gulp\" \"npm run watchify\"",
     "gulp": "gulp",
-    "babelify": "watchify ./src/script/script.js -t babelify -o 'exorcist ./dist/script/script.js.map > ./dist/script/script.js' -d -v"
+    "watchify": "watchify ./src/script/script.js -t babelify -o 'exorcist ./dist/script/script.js.map > ./dist/script/script.js' -d -v",
+    "browserify": "browserify -t babelify ./src/script/script.js | uglifyjs -mc warnings=false > ./dist/script/script.js"
   },
   "author": {
     "name": "Yoshiaki Ito",
@@ -25,6 +26,7 @@
     "babel-register": "^6.26.0",
     "babelify": "^8.0.0",
     "browser-sync": "^2.18.13",
+    "browserify": "^14.5.0",
     "concurrently": "^3.5.1",
     "exorcist": "^1.0.0",
     "gulp": "^3.9.1",
@@ -44,6 +46,7 @@
     "jshint": "^2.9.5",
     "jshint-stylish": "^2.2.1",
     "run-sequence": "^2.2.0",
+    "uglify-js": "^3.2.2",
     "watchify": "^3.9.0"
   },
   "dependencies": {}
