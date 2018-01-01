@@ -36,9 +36,9 @@ const config = {
     cssFiles   : `${SRC_ROOT}/style/**/*.scss`,
     jsDir      : `${SRC_ROOT}/script`,
     jsFiles    : `${SRC_ROOT}/script/**/*.js`,
-    jsVendors  : `${SRC_ROOT}/script/vendor/**/*.js`,
+    jslib      : `${SRC_ROOT}/script/lib/**/*.js`,
     imageDIr   : `${SRC_ROOT}/image`,
-    imageFiles : `${SRC_ROOT}/image/**/*.{png,jpg,jpeg,gif}`
+    imageFiles : `${SRC_ROOT}/image/**/*.{png,jpg,jpeg,gif,ico}`
   },
   dest: {
     root       : DIST_ROOT,
@@ -48,7 +48,7 @@ const config = {
     jsDir      : `${DIST_ROOT}/script`,
     jsFiles    : `${DIST_ROOT}/script/**/*.js`,
     imageDir   : `${DIST_ROOT}/image`,
-    imageFiles : `${DIST_ROOT}/image/**/*.{png,jpg,jpeg,gif}`
+    imageFiles : `${DIST_ROOT}/image/**/*.{png,jpg,jpeg,gif,ico}`
   }
 };
 
@@ -70,7 +70,7 @@ gulp.task('reload', function(){
   browserSync.reload();
 });
 
-// Jade
+// Pug
 gulp.task('html', () => {
   return gulp.src(src.htmlFiles)
     .pipe(plumber())
@@ -81,10 +81,10 @@ gulp.task('html', () => {
 });
 
 // vendor js concat & uglify
-gulp.task('jsVendors', () => {
-  return gulp.src(src.jsVendors)
+gulp.task('jslib', () => {
+  return gulp.src(src.jslib)
     .pipe(plumber())
-    .pipe(concat('vendor.js'))
+    .pipe(concat('libs.js'))
     .pipe(uglify({output:{comments: /^!/}}))
     .pipe(gulp.dest(dist.jsDir))
     .pipe(browserSync.stream());
@@ -94,7 +94,7 @@ gulp.task('jsVendors', () => {
 gulp.task('jshint', () => {
   return gulp.src(src.jsFiles)
     .pipe(plumber())
-    .pipe(filter((file) => !/vendor/.test(file.path)))
+    .pipe(filter((file) => !/lib/.test(file.path)))
     .pipe(jshint())
     .pipe(jshint.reporter(stylish))
     .pipe(browserSync.stream());
@@ -131,7 +131,7 @@ gulp.task('style', () => {
 gulp.task('watch', () => {
   watch([src.htmlFiles],  (e) => gulp.start(['html', 'reload']));
   watch([src.jsFiles],    (e) => gulp.start(['jshint']));
-  watch([src.jsVendors],  (e) => gulp.start(['jsVendors']));
+  watch([src.jslib],      (e) => gulp.start(['jslib']));
   watch([src.cssFiles],   (e) => gulp.start(['style']));
   watch([src.imageFiles], (e) => gulp.start(['image']));
 });
@@ -139,7 +139,7 @@ gulp.task('watch', () => {
 
 // build
 // - only compile
-gulp.task('build', (callback) => run(['html', 'style', 'image', 'jshint', 'jsVendors'], callback));
+gulp.task('build', (callback) => run(['html', 'style', 'image', 'jshint', 'jslib'], callback));
 
 // default
 //  - local development task

@@ -31,7 +31,7 @@ gulp style
 
 ## JS（vendor）
 
-jQueryやLodash.jsなどのライブラリは `src/js/vendor/` に格納し、`dist/js/vendor.js` に結合圧縮される想定。
+jQueryやLodash.jsなどのライブラリは `src/js/lib/` に格納し、`dist/js/libs.js` に結合圧縮される想定。
 
 - [gulp-concat](https://www.npmjs.com/package/gulp-concat)
 - [gulp-uglify](https://www.npmjs.com/package/gulp-uglify)
@@ -39,7 +39,7 @@ jQueryやLodash.jsなどのライブラリは `src/js/vendor/` に格納し、`d
 - [jshint-stylish](https://github.com/sindresorhus/jshint-stylish)
 
 ```
-gulp jsVendors // -> build vendor.js
+gulp jslib // -> build libs.js
 ```
 
 ## JS（BabelJS）
@@ -64,9 +64,11 @@ npm run watchify
 npm run browserify
 ```
 
+
+
 ## img
 
-`src/img/` 配下をすべて個別に圧縮して `htdocs/img/` に出力する。
+`src/image/` 配下をすべて個別に圧縮して `htdocs/image/` に出力する。
 
 - [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin)
 
@@ -96,7 +98,7 @@ gulp watch
 
 ## ビルド
 
-pug,scss,js,image
+pug, scss, libs.js, image
 
 ```
 gulp build
@@ -104,8 +106,18 @@ gulp build
 
 ## npm run script
 
+### ローカル開発
+
 ```
 npm start
 ```
 
 呼び出しているのは `gulp default` タスク。
+
+### app.jsの圧縮
+
+```
+npm run build:js
+```
+
+browserifyとuglififyでトランスパイル＆ミニファイ。
