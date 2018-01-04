@@ -1,6 +1,6 @@
 {
-  "name": "website-dev-startkit",
-  "version": "2.1.0",
+  "name": "tkg-boilerplate",
+  "version": "2.1.1",
   "description": "",
   "main": "gulpfile.babel.js",
   "scripts": {
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/oti/tkg-boilerplate"
   },
   "devDependencies": {
     "babel": "^6.23.0",

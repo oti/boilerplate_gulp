@@ -1,10 +1,12 @@
-# website-dev-startkit
+# tkg-boilerplate
 
 ウェブサイト作るときによくある自動化タスクをプリセットしたスタートキット。
 
 これですべてができるというものではなくて、これをベースにタスクを足したり引いたりして使う用のもの。
 
 これをクローンして `.git` 以外をプロジェクトルートにコピーし、新たに `git init` して使う。
+
+名前はテキトー。
 
 ## HTML
 
@@ -29,7 +31,7 @@ gulp html
 gulp style
 ```
 
-## JS（vendor）
+## JSライブラリ
 
 jQueryやLodash.jsなどのライブラリは `src/js/lib/` に格納し、`dist/js/libs.js` に結合圧縮される想定。
 
@@ -42,7 +44,7 @@ jQueryやLodash.jsなどのライブラリは `src/js/lib/` に格納し、`dist
 gulp jslib // -> build libs.js
 ```
 
-## JS（BabelJS）
+## カスタムJavaScript
 
 ES6構文で書くJSはbabelifyでbundleする。監視はwatchify。このタスクのみnpm run-scriptで行う。
 
@@ -61,12 +63,12 @@ npm run watchify
 圧縮ビルドはwatchifyを通さずにやる
 
 ```
-npm run browserify
+npm run build:js
 ```
 
 
 
-## img
+## 画像
 
 `src/image/` 配下をすべて個別に圧縮して `htdocs/image/` に出力する。
 
