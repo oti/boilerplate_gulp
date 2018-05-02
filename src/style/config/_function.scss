@@ -1,3 +1,5 @@
+@import '../../../node_modules/easing-sass-function/src/easing-function';
+
 // Smooth linear-gradient
 @function scrim-gradient($color: #000, $opacity: 1) {
   $scrim-gradient: (

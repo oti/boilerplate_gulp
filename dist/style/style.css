@@ -1,5 +1,5 @@
 /*!
  *  @developer oti/Yoshiaki Ito(Maboroshi Inc)
  */
-*{margin:0;padding:0}*,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}:root{font-size:10px}main{display:block}img{-ms-interpolation-mode:bicubic;border:0;vertical-align:top;background:0 0}mark{background-color:transparent}a:link,img{text-decoration:none}a:hover{text-decoration:underline}a:focus{text-decoration:underline}
+*{margin:0;padding:0}*,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}:root{font-size:10px}main{display:block}img{-ms-interpolation-mode:bicubic;border:0;vertical-align:top;background:0 0}mark{background-color:transparent}a:link,img{text-decoration:none}a:hover{text-decoration:underline}a:focus{text-decoration:underline}.test{-webkit-transition:all .5s cubic-bezier(1,0,0,1);transition:all .5s cubic-bezier(1,0,0,1)}
 /*# sourceMappingURL=style.css.map */
