@@ -46,12 +46,13 @@ gulp jslib // -> build libs.js
 
 ## カスタムJavaScript
 
-ES6構文で書くJSはbabelifyでbundleする。監視はwatchify。このタスクのみnpm run-scriptで行う。
+ES6構文で書くJSはbrowserifyでbundleする。監視はwatchify。このタスクのみnpm run-scriptで行う。
 
 - babel
 - babel-core
 - babel-preset-env
 - babelify
+- browserify
 - watchify
 - exorcist
 - uglify-js
