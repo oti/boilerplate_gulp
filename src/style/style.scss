@@ -18,4 +18,5 @@
 // モジュールたち
 .test {
   transition: all 0.5s ease(easeInOutExpo);
+  background-image: linear-gradinet(to, bottom, scrim-gradient());
 }

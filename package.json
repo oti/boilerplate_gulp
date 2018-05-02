@@ -50,6 +50,7 @@
     "watchify": "^3.11.0"
   },
   "dependencies": {
-    "easing-sass-function": "^1.1.0"
+    "easing-sass-function": "^1.1.0",
+    "smooth-gradient-sass-function": "^1.0.0"
   }
 }
