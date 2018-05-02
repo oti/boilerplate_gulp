@@ -3,20 +3,13 @@
 // scssコンパイル用メタファイル
 @import 'config/var';
 @import 'config/placeholder';
-@import 'config/function';
 @import 'config/mixin';
-
-// バナー
-@import 'config/banner';
-
-// 男は黙ってMinimum Reset CSS
-@import 'foundation/reset';
+@import 'config/function';
 
 // 下地
+@import 'foundation/normalize';
+@import 'foundation/reset';
 @import 'foundation/base';
 
-// モジュールたち
-.test {
-  transition: all 0.5s ease(easeInOutExpo);
-  background-image: linear-gradinet(to, bottom, scrim-gradient());
-}
+// モジュール
+@import "module/btn";

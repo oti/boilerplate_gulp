@@ -1,45 +1,13 @@
 :root {
   font-size: 10px;
 }
-
-html{
-}
-
 body {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: unset;
 }
-
-main {
-  display: block;
-}
-
-img {
-  -ms-interpolation-mode: bicubic;
-  border: 0 none;
-  text-decoration: none;
-  vertical-align: top;
-  background: transparent;
-}
-
-mark {
-  background-color: transparent;
-}
-
-a {
-  &:link {
-    text-decoration: none;
-  }
-
-  &:visited {
-  }
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  &:active {
-  }
-
-  &:focus {
-    text-decoration: underline;
+@media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 2dppx) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
