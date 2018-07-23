@@ -3,10 +3,10 @@
 
 ## Get Started
 
-Require Node.js v8.10.0
+Require Node.js v8.11.3
 
 ```
-ndenv install 8.10.0
+ndenv install 8.11.3
 ndenv rehash
 ```
 

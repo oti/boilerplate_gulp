@@ -9,8 +9,6 @@ class InView {
 
   constructor() {
     this.$inView = document.querySelectorAll('.js-inView');
-
-    IntersectionObserverPoryfill();
     this.observer = new IntersectionObserver((observes) => {
       this.observeTarget(observes)
     }, {
@@ -19,6 +17,7 @@ class InView {
   }
 
   init() {
+    if (!this.$inView.length) return;
     this.attachEvent();
   }
 

@@ -108,7 +108,7 @@ gulp.task('css:preprocessor', () => {
     .pipe($.plumber())
     .pipe($.filter(file => !/\/_/.test(file.path)))
     .pipe($.sass().on('error', $.sass.logError))
-    .pipe($.autoprefixer(settings.browserslist))
+    .pipe($.autoprefixer())
     .pipe($.combineMq({
         beautify: true
     }))

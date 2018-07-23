@@ -1,6 +1,6 @@
 {
   "name": "tkg-boilerplate",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "",
   "main": "gulpfile.babel.js",
   "scripts": {
@@ -11,6 +11,12 @@
     "image": "gulp image:minify",
     "font": "gulp font"
   },
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 9",
+    "Android >= 4",
+    "iOS >= 6"
+  ],
   "author": {
     "name": "",
     "email": "",
@@ -22,12 +28,12 @@
   },
   "devDependencies": {
     "babel": "^6.23.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "6.4.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^6.4.1",
     "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "bower-webpack-plugin": "^0.1.9",
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.24.6",
     "css-loader": "^0.28.11",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
@@ -59,8 +65,8 @@
   "dependencies": {
     "easing-sass-function": "^1.1.0",
     "jquery": "^3.3.1",
-    "lodash": "^4.17.5",
     "normalize.css": "^8.0.0",
-    "smooth-gradient-sass-function": "^1.0.0"
+    "smooth-gradient-sass-function": "^1.0.0",
+    "what-input": "^5.1.1"
   }
 }

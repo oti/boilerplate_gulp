@@ -5,8 +5,6 @@
 //
 // ======================================== */
 
-import _ from 'underscore';
-
 const SRC_ROOT  = './src';
 const DEST_ROOT = './htdocs';
 
@@ -17,12 +15,6 @@ let sprites = [
 
 // constant
 var settings = exports.settings = {
-  browserslist: [
-    'last 2 versions',
-    'IE >= 10',
-    'iOS >= 8',
-    'Android >= 4.2'
-  ],
   spritesmith: getSprites()
 };
 
@@ -50,7 +42,7 @@ var dest = exports.dest = {
 };
 
 function getSprites() {
-  return _.map(sprites, (sprite) => {
+  return sprites.map(sprite => {
     return {
       srcFile: `${sprite.dir}/${sprite.name}`,
       imgName: `${sprite.name}.png`,

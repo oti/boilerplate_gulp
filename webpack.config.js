@@ -11,7 +11,7 @@ var plugins = [
   new webpack.ProvidePlugin({
     jQuery: 'jquery',
     $: 'jquery',
-    _: 'lodash'
+    whatInput: 'what-input'
   })
 ];
 

@@ -7,9 +7,11 @@
 @import 'config/function';
 
 // 下地
+@import 'foundation/font-face';
 @import 'foundation/normalize';
 @import 'foundation/reset';
 @import 'foundation/base';
+@import 'foundation/what-input';
 
 // モジュール
 @import "module/btn";
