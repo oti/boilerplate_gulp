@@ -7,11 +7,26 @@
 @import 'config/function';
 
 // 下地
-@import 'foundation/font-face';
+@import 'foundation/font';
 @import 'foundation/normalize';
 @import 'foundation/reset';
 @import 'foundation/base';
 @import 'foundation/what-input';
 
-// モジュール
-@import "module/btn";
+// レイアウト
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/main';
+
+// コンポーネント
+// @import 'object/component/btn';
+
+// プロジェクト
+// @import 'object/project/***';
+
+
+// ユーティリティー
+@import 'object/utility/utility';
+
+// デバッグ用
+// *,*::before,*::after {outline: 2px solid red}

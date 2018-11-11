@@ -9,9 +9,11 @@ var plugins = [
   // bower.jsonにあるパッケージをrequire出来るように
   new BowerWebpackPlugin(),
   new webpack.ProvidePlugin({
-    jQuery: 'jquery',
-    $: 'jquery',
     whatInput: 'what-input'
+  }),
+  // 常に圧縮
+  new webpack.optimize.UglifyJsPlugin({
+    compress: { warnings: false }
   })
 ];
 
@@ -25,8 +27,7 @@ if (PROD) {
 
 module.exports = {
   entry: {
-    main: ['babel-polyfill', jsDir + '/main.js'],
-    libs: jsDir + '/libs.js'
+    script: ['babel-polyfill', jsDir + '/script.js']
   },
   output: {
     filename: '[name].js'

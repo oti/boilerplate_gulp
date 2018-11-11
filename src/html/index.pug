@@ -1,21 +1,21 @@
+-
+  var _title = ""
+  var _sitename = ""
+  var _desc = ""
+  var _keywords = ""
+  var _class = "top"
+  var _host = ""
+  var _pagePath = ""
+  var _permalink = _host+_pagePath
 doctype html
-html
-  head
-    meta(charset='utf-8')
-    title TKG-boilerplate
-    meta(name='description', content='')
-    meta(property='og:site_name', content='')
-    meta(property='og:title', content='')
-    meta(property='og:type', content='website')
-    meta(property='og:url', content='')
-    meta(property='og:image', content='')
-    meta(property='og:description', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet', href='/style/style.css')
-    script(src='/script/libs.js')
-  body
-    header.header
-      h1.header__heading TKG-boilerplate
-    main.main
-    footer.footer
-    script(src='/script/main.js')
+html(lang="ja")
+  include _partial/meta
+
+  body(class=_class)
+    include _partial/analytics
+    header.l-header#header
+      .l-header__inner
+
+    main.l-main
+
+    footer.l-footer#footer

@@ -1,5 +1,7 @@
-# Gulp
+# TKG Boilerplate
 =====
+
+小規模のコポサ、LPを作るときによく使う環境です。
 
 ## Get Started
 
@@ -10,20 +12,25 @@ ndenv install 8.11.3
 ndenv rehash
 ```
 
+```
+yarn
+```
+
 ## Usage
 ### development
 ```
-npm start
+yarn start
 ```
 
 ### build
+
 ```
-npm run build
+yarn build
 ```
 
 ### release
 ```
-npm run release
+yarn release
 ```
 
 ## Gulp Task

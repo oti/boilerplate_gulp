@@ -21,8 +21,8 @@ let settings = config.settings;
 
 // define tasks
 gulp.task('default', ['browser-sync', 'watch']);
-gulp.task('build', ['css:preprocessor', 'js:copy', 'js:webpack', 'image:sprite', 'image:minify', 'html']);
-gulp.task('release', ['image:sprite', 'image:minify', 'css:minify', 'html', 'js:copy']);
+gulp.task('build', ['css:preprocessor', 'doc:copy', 'video:copy', 'json:copy', 'js:copy', 'js:webpack', 'image:sprite', 'image:minify', 'html']);
+gulp.task('release', ['image:sprite', 'image:minify', 'html', 'doc:copy', 'json:copy', 'video:copy', 'js:copy']);
 
 /**
  * watch task
@@ -43,7 +43,7 @@ gulp.task('browser-sync', () => {
     server: {
       baseDir: dest.root
     },
-    // open: false
+    startPath: dest.path
   });
 });
 
@@ -52,13 +52,39 @@ gulp.task('browser-sync', () => {
  */
 gulp.task('html', () => {
   return gulp.src(src.htmlFiles)
-  .pipe($.pug({
-    pretty: !process.env.NODE_ENV
-  }))
-  .pipe(gulp.dest(dest.root))
-  .pipe(browserSync.reload({
-    stream: true
-  }));
+    .pipe($.plumber())
+    .pipe($.filter((file) => !/\/_/.test(file.path)))
+    .pipe($.pug({
+      pretty: !process.env.NODE_ENV
+    }))
+    .pipe(gulp.dest(dest.htmlDir))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
+
+
+/**
+ * videoをdestにコピーするだけのタスク
+ */
+gulp.task('video:copy', () => {
+  gulp.src(src.videoFiles)
+    .pipe(gulp.dest(dest.videoDir))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
+
+
+/**
+ * docをdestにコピーするだけのタスク
+ */
+gulp.task('doc:copy', () => {
+  gulp.src(src.docFiles)
+    .pipe(gulp.dest(dest.docDir))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
 
@@ -68,6 +94,18 @@ gulp.task('html', () => {
 gulp.task('js:copy', () => {
   gulp.src(src.jsDir + '/others/**/*.js')
     .pipe(gulp.dest(dest.jsDir))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
+
+
+/**
+ * jsonをdestにコピーするだけのタスク
+ */
+gulp.task('json:copy', () => {
+  gulp.src(src.jsonFiles)
+    .pipe(gulp.dest(dest.jsonDir))
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -107,7 +145,7 @@ gulp.task('css:preprocessor', () => {
   return gulp.src(src.cssFiles)
     .pipe($.plumber())
     .pipe($.filter(file => !/\/_/.test(file.path)))
-    .pipe($.sass().on('error', $.sass.logError))
+    .pipe($.sass())
     .pipe($.autoprefixer())
     .pipe($.combineMq({
         beautify: true
@@ -156,8 +194,7 @@ gulp.task('image:sprite', () => {
     var options = {
       imgName: sprite.imgName,
       cssName: sprite.cssName,
-      imgPath: sprite.imgPath,
-      padding: 4
+      imgPath: sprite.imgPath
     };
     var spriteData = gulp.src(`${sprite.srcFile}/*.png`)
       .pipe($.plumber())

@@ -4,7 +4,8 @@ Thumbs.db
 npm-debug.log
 
 htdocs/
-build
+build/
+node_modules/
 
 ### https://raw.github.com/github/gitignore/35c010258fc790ad769033e9ccfb1021178f2925/node.gitignore
 
@@ -41,10 +42,6 @@ bower_components
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
-
-# Dependency directories
-node_modules/
-jspm_packages/
 
 # Typescript v1 declaration files
 typings/
