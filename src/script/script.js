@@ -14,8 +14,6 @@ import InView from './modules/InView'
 import Tab from './modules/Tab'
 
 document.addEventListener('DOMContentLoaded', (event) => {
-  const body = document.querySelector('body')
-
   const anchorLink = new AnchorLink()
   anchorLink.init()
 

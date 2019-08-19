@@ -7,15 +7,15 @@
 
 // psdのパーツのサイズを渡すと1366px幅ベースにおいて%単位にする
 @function per($psd_px, $base: 1366) {
-  @return #{$psd_px / $base * 100 + %}
+  @return #{$psd_px / $base * 100 + '%'}
 }
 
 // psdのパーツのサイズを渡すと750px幅ベースにおいてvw単位にする
 @function vw($psd_px, $base: 750) {
-  @return #{$psd_px / $base * 100 + vw}
+  @return #{$psd_px / $base * 100 + 'vw'}
 }
 
 // psdのパーツのサイズを渡すと960px高ベースにおいてvw単位にする
 @function vh($psd_px, $base: 960) {
-  @return #{$psd_px / $base * 100 + vh}
+  @return #{$psd_px / $base * 100 + 'vh'}
 }

@@ -1,0 +1,20 @@
+{
+  "site_name": "TKG Boilerplate",
+  "path": {
+    "doc_root": "htdocs/",
+    "src": {
+      "html": "src/html/**/*.pug",
+      "html_src": "src/html/**/*.pug",
+      "html_ignore": "!src/html/_partial/**.pug",
+      "style": "src/style/**/*.scss",
+      "script": "src/script/**/*.js",
+      "image": "src/image/**/*.{jpg,png,gif,svg}"
+    },
+    "dist": {
+      "html": "htdocs/",
+      "style": "htdocs/asset/style",
+      "script": "htdocs/asset/script",
+      "image": "htdocs/asset/image"
+    }
+  }
+}

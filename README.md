@@ -3,56 +3,35 @@
 
 小規模のコポサ、LPを作るときによく使う環境です。
 
-## Get Started
+- Pug
+- Sass
+- imagemin
+- webpack
 
-Require Node.js v8.11.3
+めんどいっぽいのでCSSと画像をJSでimportすることはしません。
+
+webpackでもjQueryは使えるのでやりたかったら`npm i jquery`して`import jQuery from "jquery"`したら良いです。
+
+## Node.js v12.8.1を要求します
+
+2019-08-19時点でLatestの Node.js v12.8.1 を使います。
 
 ```
-ndenv install 8.11.3
+ndenv install 12.8.1
 ndenv rehash
 ```
 
 ```
-yarn
+npm ci
 ```
 
-## Usage
-### development
-```
-yarn start
-```
 
-### build
+## 開発を始める
 
 ```
-yarn build
+npm start
 ```
 
-### release
-```
-yarn release
-```
+ビルドしてwatchしてサーバーが起動します。
 
-## Gulp Task
-
-### CSS Build
-```
-gulp css:preprocessor
-gulp css:minify
-```
-
-### JS Build
-```
-gulp js
-gulp js:minify
-```
-
-### Image Sprite
-```
-gulp image:sprite
-```
-
-### Image Minify
-```
-gulp image:minify
-```
+`localhost:3000`
