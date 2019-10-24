@@ -19,14 +19,14 @@
 @import 'layout/main';
 
 // コンポーネント
-@import 'object/component/btn';
+@import 'object/component/*';
 
 // プロジェクト
-// @import 'object/project/***';
+@import 'object/project/*';
 
 
 // ユーティリティー
-@import 'object/utility/utility';
+@import 'object/utility/*';
 
 // デバッグ用
 // *,*::before,*::after {outline: 2px solid red}

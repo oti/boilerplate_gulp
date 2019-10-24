@@ -26,3 +26,11 @@ gulp.task('default', gulp.series(
   watch,
   server
 ));
+
+// npx gulp build
+gulp.task('build', gulp.series(
+  html,
+  style,
+  script,
+  image
+));

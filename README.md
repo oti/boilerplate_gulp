@@ -24,16 +24,32 @@ ndenv install 12.8.1
 ndenv rehash
 ```
 
+package-lock.json で固定したバージョンで利用するためインストールは `ci` で行ってください。
+
 ```
 npm ci
 ```
 
 ## 開発を始めるには
 
-npm ru-script から `start` コマンドを呼び出してください。
+npm run-script から `start` コマンドを呼び出してください。
 
 ```
 npm start
 ```
 
 各種コンパイルをして、watch とローカルサーバー `localhost:3000` が起動します。
+
+## ビルドのみを行うには
+
+npm run-script から `build` コマンドを呼び出してください。
+
+```
+npm run build
+```
+
+各種コンパイルのみを行い、 `htdocs` にビルドファイルが生成されます。
+
+## 各種パスを変更するには
+
+config.json にパスの情報が書かれているので適宜変更してください。

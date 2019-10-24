@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "tkg-boilerplate",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "my boilerplate",
   "author": {
     "name": "oti",
@@ -14,7 +14,8 @@
   },
   "license": "",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "build": "gulp build"
   },
   "browserslist": [
     "last 2 versions",
@@ -36,6 +37,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
     "gulp-uglify-es": "^1.0.4",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^7.0.0",
