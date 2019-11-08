@@ -1,4 +1,4 @@
-# TKG Boilerplate
+# Boilerplate Web Dev
 
 小規模のコポサ、LPを作るときによく使う環境です。あくまでベースなので過不足は適宜処理してください。
 
