@@ -7,20 +7,20 @@
 - HTML -> Pug
 - CSS -> Sass
 - 画像 -> imagemin
-- JS -> webpack
+- JS -> Babel + webpack
 
-めんどいっぽいので CSS と画像を JS でバンドルすることはしません。
-
-本ボイラープレートではwebpackにはあくまでモダンなJS開発プラットフォームとしての動作を期待しています。
+JSはBabelでトランスパイル、Webpackでバンドルします。CSSや画像のバンドルはしません。
 
 webpack でも jQuery は使えるのでやりたかったら`npm i jquery`して`import jQuery from "jquery"`したら良いです。
 
-## Node.js は v12.8.1 を利用
+## Node.js は v12.16.1 を利用
 
-2019-08-19 時点で Latest の Node.js v12.8.1 を使います。漢は黙って Latest
+2020-03-20 時点で Latest の Node.js v12.16.1 を使います。漢は黙って Latest.
+
+ndenvなど使ってください。
 
 ```
-ndenv install 12.8.1
+ndenv install 12.16.1
 ndenv rehash
 ```
 
