@@ -26,12 +26,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const drawer = new Drawer()
   drawer.init()
 
-  const modal = new Modal()
-  modal.init()
+  const inView = new InView()
+  inView.init()
 
   const tab = new Tab()
   tab.init()
-
-  const inView = new InView()
-  inView.init()
 })
