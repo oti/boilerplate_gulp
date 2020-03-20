@@ -1,11 +1,11 @@
 module.exports = {
   mode: 'production',
-
-  // メインのJS
-  entry: './src/script/script.js',
-  // 出力ファイル
+  entry: {
+    script: './src/script/script.js'
+  },
   output: {
-    filename: 'script.js'
+    filename: '[name].js',
+    path: __dirname + '/dist/script'
   },
   resolve: {
     extensions: [".js", ".json", ".jsx", ".css"]
