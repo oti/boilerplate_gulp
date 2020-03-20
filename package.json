@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "boilerplate_web-dev",
-  "version": "5.1.1",
+  "version": "5.1.2",
   "description": "my boilerplate",
   "author": {
     "name": "oti",
@@ -24,8 +24,8 @@
     "iOS >= 6"
   ],
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
@@ -41,16 +41,16 @@
     "gulp-uglify-es": "^1.0.4",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^7.0.0",
-    "webpack": "^4.39.0",
+    "webpack": "^4.42.0",
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
     "easing-sass-function": "^1.1.0",
-    "focus-trap": "^5.0.2",
+    "focus-trap": "^5.1.0",
     "no-scroll": "^2.1.1",
     "normalize.css": "^8.0.1",
-    "smooth-gradient-sass-function": "^1.0.0",
-    "smooth-scroll": "^16.1.0",
-    "what-input": "^5.2.3"
+    "smooth-gradient-sass-function": "^2.0.0",
+    "smooth-scroll": "^16.1.2",
+    "what-input": "^5.2.7"
   }
 }
