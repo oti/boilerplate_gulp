@@ -19,7 +19,8 @@ const style = () => {
       outputStyle: 'compressed'
     }))
     .pipe(autoprefixer({
-      cascade: false
+      cascade: false,
+      grid: true
     }))
     .pipe(csso())
     .pipe(gulp.dest(path.dist.style, {
