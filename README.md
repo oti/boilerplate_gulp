@@ -1,55 +1,40 @@
-# Boilerplate Web Dev
+# Gup Web Dev Boilerplate
 
-小規模のコポサ、LPを作るときによく使う環境です。あくまでベースなので過不足は適宜処理してください。
+Gulp を使ったウェブサイト開発環境のボイラープレートです。
 
-## コンパイルに利用している技術
+dependencies の過不足は適宜処理してください。
 
 - HTML -> Pug
 - CSS -> Sass
-- 画像 -> imagemin
+- Image -> imagemin
 - JS -> Babel + webpack
 
-JSはBabelでトランスパイル、Webpackでバンドルします。CSSや画像のバンドルはしません。
+JS は Babel でコンパイル、webpack でバンドルします。CSSや画像のバンドルはしません。
 
-webpack でも jQuery は使えるのでやりたかったら`npm i jquery`して`import jQuery from "jquery"`したら良いです。
+webpack でも jQuery は使えるのでやりたかったら `npm i jquery` して `import jQuery from "jquery"` したら良いです。
 
-## Node.js は v12.16.1 を利用
+## development
 
-2020-03-20 時点で Latest の Node.js v12.16.1 を使います。漢は黙って Latest.
-
-ndenvなど使ってください。
-
-```
+```bash
 ndenv install 12.16.1
 ndenv rehash
 ```
 
-package-lock.json で固定したバージョンで利用するためインストールは `ci` で行ってください。
-
-```
+```bash
 npm ci
-```
-
-## 開発を始めるには
-
-npm run-script から `start` コマンドを呼び出してください。
-
-```
 npm start
 ```
 
-各種コンパイルをして、watch とローカルサーバー `localhost:3000` が起動します。
+`localhost:3000` が起動します。
 
-## ビルドのみを行うには
+## build
 
-npm run-script から `build` コマンドを呼び出してください。
-
-```
+```bash
 npm run build
 ```
 
-各種コンパイルのみを行い、 `htdocs` にビルドファイルが生成されます。
+`dist/` にビルドされます。
 
-## 各種パスを変更するには
+## configration
 
-config.json にパスの情報が書かれているので適宜変更してください。
+ソースやビルドのパスは `config.json` で管理しています。

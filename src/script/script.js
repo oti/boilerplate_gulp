@@ -1,10 +1,9 @@
+import 'intersection-observer'
 import arrayFrom from './libs/array-from'
-import isoPoryfill from './libs/intersection-observer-poryfill'
 import uac from './libs/user-agent-checker'
-import whatInput from 'what-input'
+import 'what-input'
 
 arrayFrom();
-isoPoryfill()
 uac();
 
 import AnchorLink from './modules/AnchorLink'

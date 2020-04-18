@@ -4,7 +4,7 @@ npm-debug.log*
 
 logs
 docs
-htdocs
+dist
 build
 public
 node_modules
