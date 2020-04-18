@@ -1,7 +1,7 @@
 import arrayFrom from './libs/array-from'
 import isoPoryfill from './libs/intersection-observer-poryfill'
+import 'what-input'
 import uac from './libs/user-agent-checker'
-import whatInput from 'what-input'
 
 arrayFrom();
 isoPoryfill()
