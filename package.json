@@ -48,6 +48,7 @@
   "dependencies": {
     "easing-sass-function": "^1.1.0",
     "focus-trap": "^5.1.0",
+    "intersection-observer": "^0.9.0",
     "no-scroll": "^2.1.1",
     "normalize.css": "^8.0.1",
     "smooth-gradient-sass-function": "^2.0.0",
