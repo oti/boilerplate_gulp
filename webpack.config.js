@@ -5,9 +5,9 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: __dirname + '/dist/script'
+    path: __dirname + '/asset/script'
   },
   resolve: {
-    extensions: [".js", ".json", ".jsx", ".css"]
+    extensions: [".js"]
   }
 }

@@ -1,7 +1,7 @@
-import arrayFrom from './libs/array-from'
 import 'intersection-observer'
-import 'what-input'
+import arrayFrom from './libs/array-from'
 import uac from './libs/user-agent-checker'
+import 'what-input'
 
 arrayFrom();
 uac();
