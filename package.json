@@ -2,17 +2,8 @@
   "private": true,
   "name": "web-dev-boilerplate_gulp",
   "version": "5.2.0",
-  "description": "my boilerplate",
-  "author": {
-    "name": "oti",
-    "email": "otiext@gmail.com",
-    "url": "https://dskd.jp"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/oti/web-dev-boilerplate_gulp"
-  },
-  "license": "",
+  "description": "web development env boilerplate with gulp",
+  "license": "MIT",
   "scripts": {
     "start": "gulp",
     "build": "gulp build"
