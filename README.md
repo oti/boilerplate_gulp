@@ -9,7 +9,7 @@ dependencies の過不足は適宜処理してください。
 - Image -> imagemin
 - JS -> Babel + webpack
 
-JS は Babel でコンパイル、webpack でバンドルします。CSSや画像のバンドルはしません。
+JS は Babel でコンパイル、webpack でバンドルします。CSS や画像のバンドルはしません。
 
 webpack でも jQuery は使えるのでやりたかったら `npm i jquery` して `import jQuery from "jquery"` したら良いです。
 

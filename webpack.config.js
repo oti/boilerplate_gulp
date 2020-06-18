@@ -1,13 +1,13 @@
 module.exports = {
-  mode: 'production',
+  mode: "production",
   entry: {
-    script: './src/script/script.js'
+    script: "./src/script/script.js",
   },
   output: {
-    filename: '[name].js',
-    path: __dirname + '/asset/script'
+    filename: "[name].js",
+    path: __dirname + "/asset/script",
   },
   resolve: {
-    extensions: [".js"]
-  }
-}
+    extensions: [".js"],
+  },
+};

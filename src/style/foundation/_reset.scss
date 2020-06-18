@@ -1,13 +1,33 @@
-h1,h2,h3,h4,h5,h6,
-p,blockquote,table,figure,
-ul,ol,dl,li,dt,dd {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+table,
+figure,
+ul,
+ol,
+dl,
+li,
+dt,
+dd {
   margin: 0;
   padding: 0;
 }
-ul,ol,dl {
+ul,
+ol,
+dl {
   list-style: none;
 }
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   // font-feature-settings: "palt";
   font-size: 100%;
   font-weight: normal;
@@ -30,7 +50,8 @@ button {
   cursor: pointer;
   // outline: none;
 }
-a,button {
+a,
+button {
   cursor: pointer;
   &[disabled] {
     cursor: default;

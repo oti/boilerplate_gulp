@@ -1,18 +1,21 @@
-'use strict'
+"use strict";
 
-const browserSync = require('browser-sync');
-const path = require('../config.json').path;
+const browserSync = require("browser-sync");
+const path = require("../config.json").path;
 
-const server = done => {
-  browserSync.init({
-    ui: false,
-    server: {
-      baseDir: path.doc_root
+const server = (done) => {
+  browserSync.init(
+    {
+      ui: false,
+      server: {
+        baseDir: path.doc_root,
+      },
+      port: 3000,
+      startPath: "/",
+      open: true,
     },
-    port: 3000,
-    startPath: '/',
-    open: true
-  }, done)
-}
+    done
+  );
+};
 
-module.exports = server
+module.exports = server;
