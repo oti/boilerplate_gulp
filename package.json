@@ -23,6 +23,16 @@
     "Android > 3",
     "iOS > 6"
   ],
+  "dependencies": {
+    "easing-sass-function": "^1.1.0",
+    "focus-trap": "^5.1.0",
+    "intersection-observer": "^0.9.0",
+    "no-scroll": "^2.1.1",
+    "normalize.css": "^8.0.1",
+    "smooth-gradient-sass-function": "^2.0.0",
+    "smooth-scroll": "^16.1.2",
+    "what-input": "^5.2.7"
+  },
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.9.5",
@@ -40,19 +50,17 @@
     "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.1.0",
     "gulp-uglify-es": "^1.0.4",
+    "husky": "^4.2.5",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^7.0.0",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
     "webpack": "^4.42.0",
     "webpack-stream": "^5.2.1"
   },
-  "dependencies": {
-    "easing-sass-function": "^1.1.0",
-    "focus-trap": "^5.1.0",
-    "intersection-observer": "^0.9.0",
-    "no-scroll": "^2.1.1",
-    "normalize.css": "^8.0.1",
-    "smooth-gradient-sass-function": "^2.0.0",
-    "smooth-scroll": "^16.1.2",
-    "what-input": "^5.2.7"
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
