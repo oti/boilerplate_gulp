@@ -17,12 +17,6 @@
     "start": "gulp",
     "build": "gulp build"
   },
-  "browserslist": [
-    "last 2 versions",
-    "ie > 9",
-    "Android > 3",
-    "iOS > 6"
-  ],
   "dependencies": {
     "easing-sass-function": "^1.1.0",
     "focus-trap": "^5.1.0",
