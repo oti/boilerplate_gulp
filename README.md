@@ -1,4 +1,4 @@
-# Gup Web Dev Boilerplate
+# Gulp Web Dev Boilerplate
 
 Gulp を使ったウェブサイト開発環境のボイラープレートです。
 
