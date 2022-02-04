@@ -1,12 +1,10 @@
-"use strict";
-
-const gulp = require("gulp");
-const server = require("./task/server");
-const html = require("./task/html");
-const style = require("./task/style");
-const script = require("./task/script");
-const image = require("./task/image");
-const path = require("./config.json").path;
+import gulp from "gulp";
+import { server } from "./task/server";
+import { html } from "./task/html";
+import { style } from "./task/style";
+import { script } from "./task/script";
+import { image } from "./task/image";
+import { path } from "./config.json";
 
 // watch
 const watch = (done) => {
