@@ -6,47 +6,41 @@
   "license": "MIT",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "easing-sass-function": "^1.1.0",
-    "focus-trap": "^5.1.0",
-    "intersection-observer": "^0.9.0",
+    "focus-trap": "^6.7.2",
+    "intersection-observer": "^0.12.0",
     "no-scroll": "^2.1.1",
     "normalize.css": "^8.0.1",
-    "smooth-gradient-sass-function": "^2.0.0",
-    "smooth-scroll": "^16.1.2",
-    "what-input": "^5.2.7"
+    "smooth-scroll": "^16.1.3",
+    "what-input": "^5.2.10"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.9.5",
-    "@prettier/plugin-pug": "^1.5.0",
-    "babel-loader": "^8.1.0",
-    "browser-sync": "^2.26.10",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@prettier/plugin-pug": "^1.19.2",
+    "babel-loader": "^8.2.3",
+    "browser-sync": "^2.27.7",
+    "esm": "^3.2.25",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
-    "gulp-changed": "^3.2.0",
+    "gulp-changed": "^4.0.3",
     "gulp-csso": "^4.0.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-notify": "^3.2.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.0.2",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sass-glob": "^1.1.0",
-    "gulp-uglify-es": "^1.0.4",
-    "husky": "^4.2.5",
-    "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-pngquant": "^7.0.0",
-    "prettier": "^2.0.5",
-    "pretty-quick": "^2.0.1",
-    "webpack": "^4.42.0",
-    "webpack-stream": "^5.2.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
+    "gulp-uglify-es": "^3.0.0",
+    "husky": "^7.0.4",
+    "node-sass": "^7.0.1",
+    "prettier": "^2.5.1",
+    "pretty-quick": "^3.1.3",
+    "webpack": "^5.68.0",
+    "webpack-stream": "^7.0.0"
   }
 }
