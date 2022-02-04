@@ -1,9 +1,7 @@
-"use strict";
+import browserSync from "browser-sync";
+import { path } from "../config.json";
 
-const browserSync = require("browser-sync");
-const path = require("../config.json").path;
-
-const server = (done) => {
+export const server = (done) => {
   browserSync.init(
     {
       ui: false,
@@ -17,5 +15,3 @@ const server = (done) => {
     done
   );
 };
-
-module.exports = server;

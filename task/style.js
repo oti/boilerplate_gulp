@@ -1,15 +1,16 @@
-"use strict";
+import gulp from "gulp";
+import browserSync from "browser-sync";
+import nodeSass from "node-sass";
+import gulpSass from "gulp-sass";
+import sassGlob from "gulp-sass-glob";
+import autoprefixer from "gulp-autoprefixer";
+import csso from "gulp-csso";
+import plumber from "gulp-plumber";
+import { path } from "../config.json";
 
-const gulp = require("gulp");
-const browserSync = require("browser-sync");
-const sass = require("gulp-sass");
-const sassGlob = require("gulp-sass-glob");
-const autoprefixer = require("gulp-autoprefixer");
-const csso = require("gulp-csso");
-const plumber = require("gulp-plumber");
-const path = require("../config.json").path;
+const sass = gulpSass(nodeSass);
 
-const style = () => {
+export const style = () => {
   return gulp
     .src(path.src.style, {
       sourcemaps: true,
@@ -35,5 +36,3 @@ const style = () => {
     )
     .pipe(browserSync.stream());
 };
-
-module.exports = style;

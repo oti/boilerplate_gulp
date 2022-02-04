@@ -1,16 +1,14 @@
-"use strict";
+import gulp from "gulp";
+import browserSync from "browser-sync";
+import plumber from "gulp-plumber";
+import babel from "gulp-babel";
+import uglify from "gulp-uglify-es";
+import webpackStream from "webpack-stream";
+import webpack from "webpack";
+import webpackConfig from "../webpack.config.js";
+import { path } from "../config.json";
 
-const gulp = require("gulp");
-const browserSync = require("browser-sync");
-const plumber = require("gulp-plumber");
-const babel = require("gulp-babel");
-const uglify = require("gulp-uglify-es").default;
-const webpackStream = require("webpack-stream");
-const webpack = require("webpack");
-const webpackConfig = require("../webpack.config.js");
-const path = require("../config.json").path;
-
-const script = () => {
+export const script = () => {
   return plumber()
     .pipe(webpackStream(webpackConfig, webpack))
     .pipe(babel())
@@ -22,5 +20,3 @@ const script = () => {
       })
     );
 };
-
-module.exports = script;

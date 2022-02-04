@@ -1,13 +1,11 @@
-"use strict";
+import gulp from "gulp";
+import browserSync from "browser-sync";
+import pug from "gulp-pug";
+import plumber from "gulp-plumber";
+import config from "../config.json";
+const { path } = config;
 
-const gulp = require("gulp");
-const browserSync = require("browser-sync");
-const pug = require("gulp-pug");
-const plumber = require("gulp-plumber");
-const config = require("../config.json");
-const path = config.path;
-
-const html = () => {
+export const html = () => {
   return gulp
     .src([path.src.html, path.src.html_ignore])
     .pipe(plumber())
@@ -24,5 +22,3 @@ const html = () => {
       })
     );
 };
-
-module.exports = html;
