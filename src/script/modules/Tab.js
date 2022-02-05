@@ -3,7 +3,7 @@
  *   タブ
  */
 
-class Tab {
+export default class Tab {
   constructor() {
     this.wrap = document.querySelector("#tabPanelWrap");
     this.button1 = document.querySelector("#tabButton1");
@@ -107,5 +107,3 @@ class Tab {
     }
   }
 }
-
-export default Tab;
