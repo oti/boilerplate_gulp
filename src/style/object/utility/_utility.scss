@@ -13,15 +13,3 @@
   overflow: hidden !important;
   visibility: visible !important;
 }
-
-.u-pc {
-  @include sp {
-    display: none;
-  }
-}
-
-.u-sp {
-  @include pc {
-    display: none;
-  }
-}
