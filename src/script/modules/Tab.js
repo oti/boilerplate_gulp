@@ -28,9 +28,13 @@ export default class Tab {
   }
 
   attachEvent() {
-    window.matchMedia(this.breakpoint).addListener((event) => {
-      this.smp = event.matches;
-    });
+    window.matchMedia(this.breakpoint).addEventListener(
+      "change",
+      (event) => {
+        this.smp = event.matches;
+      },
+      false
+    );
 
     window.addEventListener(
       "resize",

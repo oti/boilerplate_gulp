@@ -25,10 +25,14 @@ export default class AnchorLink {
   }
 
   attachEvent() {
-    window.matchMedia(this.breakpoint).addListener((event) => {
-      this.smp = event.matches;
-      this.offset = this.smp ? 0 : 0;
-    });
+    window.matchMedia(this.breakpoint).addEventListener(
+      "change",
+      (event) => {
+        this.smp = event.matches;
+        this.offset = this.smp ? 0 : 0;
+      },
+      false
+    );
     this.scroll = new SmoothScroll(this.selector, { offset: this.offset });
   }
 

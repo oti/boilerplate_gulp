@@ -18,11 +18,15 @@ export default class Disclosure {
   }
 
   attachEvent() {
-    window.matchMedia(this.breakpoint).addListener((event) => {
-      this.smp = event.matches;
-      // PC幅になったら全部展開、SP幅になったら全部収納する
-      this.changeState(!this.smp);
-    });
+    window.matchMedia(this.breakpoint).addEventListener(
+      "change",
+      (event) => {
+        this.smp = event.matches;
+        // PC幅になったら全部展開、SP幅になったら全部収納する
+        this.changeState(!this.smp);
+      },
+      false
+    );
 
     this.button.addEventListener(
       "click",

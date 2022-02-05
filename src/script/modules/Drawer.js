@@ -25,11 +25,15 @@ export default class Drawer {
   }
 
   attachEvent() {
-    window.matchMedia(this.breakpoint).addListener((event) => {
-      this.smp = event.matches;
-      // ブレークポイントが変わったら必ずメニューを閉じる
-      this.changeState(false);
-    });
+    window.matchMedia(this.breakpoint).addEventListener(
+      "change",
+      (event) => {
+        this.smp = event.matches;
+        // ブレークポイントが変わったら必ずメニューを閉じる
+        this.changeState(false);
+      },
+      false
+    );
 
     this.focusTrap = FocusTrap("#header", {
       onActivate: () => {
