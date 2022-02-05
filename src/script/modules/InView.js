@@ -3,28 +3,29 @@
  *   要素が画面に入ったらクラスつける
  */
 
-class InView {
+export default class InView {
   constructor() {
-    this.inView = document.querySelectorAll(".-inView");
-    this.showName = "-show";
+    this.activeName = "-shown";
+    this.targetName = "[data-inview]";
+    this.targetElement = document.querySelectorAll(this.targetName);
     this.observer = new IntersectionObserver(
       (observes) => {
         this.observeTarget(observes);
       },
       {
         // 0だと1pxでも画面に入った瞬間に、1だと全て画面に入ったら isInteresting = true になる
-        threshold: [0],
+        threshold: [0.5],
       }
     );
   }
 
   init() {
-    if (!this.inView.length) return;
+    if (!this.targetElement.length) return;
     this.attachEvent();
   }
 
   attachEvent() {
-    Array.from(this.inView).forEach((elem) => {
+    this.targetElement.forEach((elem) => {
       this.observer.observe(elem);
     });
   }
@@ -32,20 +33,18 @@ class InView {
   observeTarget(observes) {
     observes.forEach((observe) => {
       if (observe.isIntersecting) {
-        observe.target.classList.add(this.showName);
+        observe.target.classList.add(this.activeName);
         // 監視をやめる
-        this.observer.unobserve(observe.target);
-        // } else {
-        //   observe.target.classList.remove('is-show')
+        // this.observer.unobserve(observe.target);
+      } else {
+        observe.target.classList.remove(this.activeName);
       }
     });
   }
 
   detachEvent() {
-    Array.from(this.inView).forEach((elem) => {
+    this.targetElement.forEach((elem) => {
       this.observer.unobserve(elem);
     });
   }
 }
-
-export default InView;
