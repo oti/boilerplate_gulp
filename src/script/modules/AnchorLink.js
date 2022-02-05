@@ -5,7 +5,7 @@
 
 import SmoothScroll from "smooth-scroll";
 
-class AnchorLink {
+export default class AnchorLink {
   constructor() {
     this.body = document.querySelector("body");
     this.selector = 'a[href^="#"]';
@@ -19,7 +19,7 @@ class AnchorLink {
   }
 
   init() {
-    if (!this.anchorLink) return;
+    if (!this.anchorLink.length) return;
     this.attachEvent();
     if (this.hash && this.hash !== "") this.scrollToAnchor();
   }
@@ -43,5 +43,3 @@ class AnchorLink {
     }, 10);
   }
 }
-
-export default AnchorLink;
