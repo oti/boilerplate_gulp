@@ -14,7 +14,7 @@ export default class ViewportFit {
   init() {
     if (!this.viewport) return;
     this.attachEvent();
-    this.toggleViewport();
+    this.toggleViewport(window.matchMedia(this.breakpoint).matches);
   }
 
   attachEvent() {
