@@ -1,22 +1,12 @@
 *,
-*::before,
-*::after {
+::before,
+::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
 }
 
 body {
-  position: relative;
-  color: #454545;
   font-family: $ff_ja;
-  font-feature-settings: "palt" 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -moz-osx-font-smoothing: unset;
+  color: c(base);
   hanging-punctuation: allow-end;
 }
 
@@ -34,15 +24,4 @@ img {
 
 mark {
   background-color: transparent;
-}
-
-a {
-  &:link,
-  &:visited,
-  &:hover,
-  &:focus,
-  &:active {
-    color: inherit;
-    text-decoration: none;
-  }
 }
