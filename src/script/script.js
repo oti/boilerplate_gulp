@@ -1,6 +1,4 @@
 import uac from "./libs/user-agent-checker";
-import "what-input";
-
 uac();
 
 import AnchorLink from "./modules/AnchorLink";
