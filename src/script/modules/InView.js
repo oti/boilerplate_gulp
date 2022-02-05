@@ -3,8 +3,6 @@
  *   要素が画面に入ったらクラスつける
  */
 
-import "intersection-observer";
-
 export default class InView {
   constructor() {
     this.activeName = "-shown";
