@@ -1,6 +1,3 @@
-@import "../../../node_modules/easing-sass-function/src/easing-function";
-@import "../../../node_modules/smooth-gradient-sass-function/src/smooth-gradient";
-
 @function c($name) {
   @return map-get($color, $name);
 }
