@@ -8,15 +8,12 @@
 
 // 下地
 @import "foundation/font";
-@import "foundation/normalize";
 @import "foundation/reset";
 @import "foundation/base";
 @import "foundation/what-input";
 
 // レイアウト
-@import "layout/header";
-@import "layout/footer";
-@import "layout/main";
+@import "layout/*";
 
 // コンポーネント
 @import "object/component/*";
