@@ -11,11 +11,15 @@ doctype html
 html(lang="ja")
   include _partial/meta
 
-  body(class=_class)
+  body
     include _partial/analytics
-    header#header.l-header
-      .l-header__inner
+    header.Header
+      h1 Gulp Web Dev Boilerplate
 
-    main.l-main
+    main.Main
+      .DummyBox(data-inview)
+        p ダミーテキスト
+      .DummyBox(data-inview)
+        p ダミーテキスト
 
-    footer#footer.l-footer
+    footer.Footer

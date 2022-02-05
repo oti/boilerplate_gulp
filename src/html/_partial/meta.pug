@@ -9,7 +9,7 @@
 head
   meta(charset="utf-8")
   title= _titleVal
-  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(name="viewport", content="width=device-width")
 
   meta(name="description", content=_desc)
   meta(name="keywords", content=_keywords)
@@ -17,26 +17,26 @@ head
   meta(property="og:title", content=_title)
   meta(property="og:type", content="website")
   meta(property="og:url", content=_permalink)
-  meta(property="og:image", content=_pagePath + '/asset/image/ogp.png')
+  meta(property="og:image", content=_pagePath + "/asset/image/ogp.png")
   meta(property="og:site_name", content=_sitename)
   meta(property="og:description", content=_desc)
   meta(property="og:local", content="ja")
 
-  link(rel="image_src", href=_pagePath + '/asset/image/ogp.png')
+  link(rel="image_src", href=_pagePath + "/asset/image/ogp.png")
   link(rel="shortcut icon", href="/favicon.ico")
   link(
     rel="apple-touch-icon",
-    href=_pagePath + '/asset/image/apple-touch-icon.png'
+    href=_pagePath + "/asset/image/apple-touch-icon.png"
   )
 
   link(
     rel="stylesheet",
-    href=_pagePath + '/asset/style/style.css?' + new Date().getTime().toString().substr(0, 9),
+    href=_pagePath + "/asset/style/style.css?" + new Date().getTime().toString().substr(0, 9),
     media="screen"
   )
 
   link(rel="canonical", href=_permalink)
 
   script(
-    src=_pagePath + '/asset/script/script.js?' + new Date().getTime().toString().substr(0, 9)
+    src=_pagePath + "/asset/script/script.js?" + new Date().getTime().toString().substr(0, 9)
   )
