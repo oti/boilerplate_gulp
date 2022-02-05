@@ -6,7 +6,7 @@
 import NoScroll from "no-scroll";
 import FocusTrap from "focus-trap";
 
-class Drawer {
+export default class Drawer {
   constructor() {
     this.body = document.querySelector("body");
     this.focusContainer = document.querySelector("#header");
@@ -20,7 +20,7 @@ class Drawer {
   }
 
   init() {
-    if (!this.button) return;
+    if (!this.button || !this.drawer) return;
     this.attachEvent();
   }
 
@@ -99,5 +99,3 @@ class Drawer {
     this.changeState(false);
   }
 }
-
-export default Drawer;
