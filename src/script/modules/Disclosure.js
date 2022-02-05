@@ -3,7 +3,7 @@
  *   ディスクロージャー
  */
 
-class Disclosure {
+export default class Disclosure {
   constructor(button, target) {
     this.button = button;
     this.target = target;
@@ -62,5 +62,3 @@ class Disclosure {
     this.target.style.height = 0;
   }
 }
-
-export default Disclosure;
