@@ -8,6 +8,7 @@ import Disclosure from "./modules/Disclosure";
 import Drawer from "./modules/Drawer";
 import InView from "./modules/InView";
 import Tab from "./modules/Tab";
+import ViewportFit from "./modules/ViewportFit";
 
 document.addEventListener("DOMContentLoaded", (event) => {
   const anchorLink = new AnchorLink();
@@ -29,4 +30,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   const tab = new Tab();
   tab.init();
+
+  const viewportFit = new ViewportFit();
+  viewportFit.init();
 });
