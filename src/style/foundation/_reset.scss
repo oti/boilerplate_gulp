@@ -1,26 +1,6 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-table,
-figure,
-ul,
-ol,
-dl,
-li,
-dt,
-dd {
+* {
   margin: 0;
   padding: 0;
-}
-ul,
-ol,
-dl {
-  list-style: none;
 }
 h1,
 h2,
@@ -28,7 +8,7 @@ h3,
 h4,
 h5,
 h6 {
-  // font-feature-settings: "palt";
+  font-feature-settings: "palt";
   font-size: 100%;
   font-weight: normal;
   line-height: 1;
@@ -48,7 +28,6 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  // outline: none;
 }
 a,
 button {
@@ -62,7 +41,7 @@ optgroup,
 select,
 textarea {
   font-family: inherit;
-  font-size: 1.6rem;
+  font-size: 1rem;
   cursor: pointer;
   &[disabled] {
     cursor: default;
