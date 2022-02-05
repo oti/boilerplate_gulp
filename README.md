@@ -5,7 +5,7 @@ Gulp を使ったウェブサイト開発環境のボイラープレートです
 dependencies の過不足は適宜処理してください。
 
 - HTML -> Pug
-- CSS -> Sass
+- CSS -> node-sass
 - Image -> imagemin
 - JS -> Babel + webpack
 
@@ -16,7 +16,7 @@ webpack でも jQuery は使えるのでやりたかったら `npm i jquery` し
 ## development
 
 ```bash
-ndenv install 12.18.0
+ndenv install 16.13.2
 ndenv rehash
 ```
 
