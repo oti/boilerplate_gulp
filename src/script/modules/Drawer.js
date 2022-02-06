@@ -3,8 +3,8 @@
  *   SP用ドロワーメニュー
  */
 
-import NoScroll from "no-scroll";
-import FocusTrap from "focus-trap";
+import noScroll from "no-scroll";
+import * as focusTrap from "focus-trap";
 
 export default class Drawer {
   constructor() {
@@ -16,7 +16,7 @@ export default class Drawer {
     this.stateName = "-drawerOpened";
     this.breakpoint = "(max-width: 767px)";
     this.smp = window.matchMedia(this.breakpoint).matches;
-    this.focusTrap = null;
+    this.trap = null;
   }
 
   init() {
@@ -35,7 +35,7 @@ export default class Drawer {
       false
     );
 
-    this.focusTrap = FocusTrap("#header", {
+    this.trap = focusTrap.createFocusTrap("#header", {
       onActivate: () => {
         this.focusContainer.classList.add("-active");
       },
@@ -69,9 +69,9 @@ export default class Drawer {
       return;
     }
     if (state) {
-      this.focusTrap.activate();
+      this.trap.activate();
     } else {
-      this.focusTrap.deactivate();
+      this.trap.deactivate();
     }
     this.changeAria(state);
     this.changeBodyClass(state);
@@ -89,9 +89,9 @@ export default class Drawer {
 
   changeBodyScrollability(state) {
     if (state) {
-      NoScroll.on();
+      noScroll.on();
     } else {
-      NoScroll.off();
+      noScroll.off();
     }
   }
 
