@@ -25,7 +25,6 @@ export const style = () => {
     .pipe(
       autoprefixer({
         cascade: false,
-        grid: true,
       })
     )
     .pipe(csso())
