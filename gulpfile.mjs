@@ -31,10 +31,10 @@ export const i = () => image(path.src.image, path.dest.image);
 export const s = () => script(undefined, path.dest.script);
 
 export const w = (done) => {
-  gulp.watch([path.src.html], h);
   gulp.watch([path.src.style], c);
-  gulp.watch([path.src.script], i);
-  gulp.watch([path.src.image], s);
+  gulp.watch([path.src.html], h);
+  gulp.watch([path.src.image], i);
+  gulp.watch([path.src.script], s);
   done();
 };
 
