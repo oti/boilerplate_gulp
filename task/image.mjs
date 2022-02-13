@@ -1,18 +1,17 @@
 import gulp from "gulp";
 import browserSync from "browser-sync";
-import imagemin from "gulp-imagemin";
 import changed from "gulp-changed";
-import { path } from "../config.json";
+import imagemin, { mozjpeg, optipng } from "gulp-imagemin";
 
-export const image = () => {
+export const image = (src, dest) => {
   return gulp
-    .src(path.src.image)
-    .pipe(changed(path.dist.image))
-    .pipe(gulp.dest(path.dist.image))
+    .src(src)
+    .pipe(changed(dest))
     .pipe(
-      imagemin([imagemin.mozjpeg({ quality: 80 }), imagemin.optipng()], {
+      imagemin([mozjpeg({ quality: 80 }), optipng()], {
         verbose: true,
       })
     )
+    .pipe(gulp.dest(dest))
     .pipe(browserSync.stream());
 };
