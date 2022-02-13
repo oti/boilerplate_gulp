@@ -2,20 +2,20 @@ import gulp from "gulp";
 import browserSync from "browser-sync";
 import pug from "gulp-pug";
 import plumber from "gulp-plumber";
-import config from "../config.json";
-const { path } = config;
 
-export const html = () => {
+export const html = (src, dest) => {
   return gulp
-    .src([path.src.html, path.src.html_ignore])
+    .src(src)
     .pipe(plumber())
     .pipe(
       pug({
-        locals: config,
+        locals: {
+          // pug に値を渡したい時はここに。
+        },
         pretty: true,
       })
     )
-    .pipe(gulp.dest(path.dist.html))
+    .pipe(gulp.dest(dest))
     .pipe(
       browserSync.reload({
         stream: true,
