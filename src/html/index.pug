@@ -1,20 +1,18 @@
 -
-  var _title = ""
-  var _sitename = ""
-  var _desc = ""
-  var _keywords = ""
-  var _class = "top"
-  var _host = ""
-  var _pagePath = ""
-  var _permalink = _host+_pagePath
+  const _pagePath = "/"
+  const _permalink = _siteHost+_sitePath+_pagePath
+  const _title = ""
+  const _class = "top"
+  const _cacheBuster = new Date().getTime().toString().substr(0, 9)
+
 doctype html
 html(lang="ja")
   include _partial/meta
 
-  body
+  body(class=_class)
     include _partial/analytics
     header.Header
-      h1 Gulp Web Dev Boilerplate
+      h1= _siteName
 
     main.Main
       .DummyBox(data-inview)
