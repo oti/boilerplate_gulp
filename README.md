@@ -15,12 +15,12 @@ webpack でも jQuery は使えるのでやりたかったら `npm i jquery` し
 
 ## development
 
-```bash
+```zsh
 ndenv install 16.13.2
 ndenv rehash
 ```
 
-```bash
+```zsh
 npm ci
 npm start
 ```
@@ -31,18 +31,18 @@ npm start
 
 package-lock.json を削除してから `npm i` を実行し、gulp-cli をアップデートしてください。
 
-````zsh
+```zsh
 npx gulp -v
 
 CLI version: 2.3.0
 Local version: 4.0.2
-`
+```
 
 ## build
 
-```bash
+```zsh
 npm run build
-````
+```
 
 `dist/` にビルドされます。
 
