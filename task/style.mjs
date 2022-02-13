@@ -6,13 +6,12 @@ import sassGlob from "gulp-sass-glob";
 import autoprefixer from "gulp-autoprefixer";
 import csso from "gulp-csso";
 import plumber from "gulp-plumber";
-import { path } from "../config.json";
 
 const sass = gulpSass(nodeSass);
 
-export const style = () => {
+export const style = (src, dest) => {
   return gulp
-    .src(path.src.style, {
+    .src(src, {
       sourcemaps: true,
     })
     .pipe(plumber())
@@ -29,7 +28,7 @@ export const style = () => {
     )
     .pipe(csso())
     .pipe(
-      gulp.dest(path.dist.style, {
+      gulp.dest(dest, {
         sourcemaps: "./sourcemaps",
       })
     )
