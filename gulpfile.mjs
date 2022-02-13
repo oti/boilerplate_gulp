@@ -1,9 +1,9 @@
 import gulp from "gulp";
-import { server } from "./task/server";
-import { html } from "./task/html";
-import { style } from "./task/style";
-import { script } from "./task/script";
-import { image } from "./task/image";
+import { server } from "./task/server.mjs";
+import { html } from "./task/html.mjs";
+import { style } from "./task/style.mjs";
+import { script } from "./task/script.mjs";
+import { image } from "./task/image.mjs";
 import { path } from "./config.json";
 
 // watch
