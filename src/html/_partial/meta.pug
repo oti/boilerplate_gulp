@@ -1,42 +1,24 @@
 -
-  var _titleVal = ""
-  if (_class === "top") {
-    _titleVal = _sitename
-  } else {
-    _titleVal = _title + " | " + _sitename
-  }
+  const _formattedTitle = (_class === "top")
+    ? _siteName
+    : _title + " | " + _siteName
 
 head
   meta(charset="utf-8")
-  title= _titleVal
-  meta(name="viewport", content="width=device-width")
-
-  meta(name="description", content=_desc)
-  meta(name="keywords", content=_keywords)
-
-  meta(property="og:title", content=_title)
-  meta(property="og:type", content="website")
+  title= _formattedTitle
+  meta(name="viewport", content="viewport-fit=cover, width=device-width")
+  meta(name="description", content=_siteDesc)
+  meta(name="keywords", content=_siteKeywords)
+  meta(property="og:title", content=_formattedTitle)
+  meta(property="og:site_name", content=_siteName)
+  meta(property="og:description", content=_siteDesc)
+  meta(property="og:image", content=_siteOGP)
   meta(property="og:url", content=_permalink)
-  meta(property="og:image", content=_pagePath + "/asset/image/ogp.png")
-  meta(property="og:site_name", content=_sitename)
-  meta(property="og:description", content=_desc)
+  meta(property="og:type", content="website")
   meta(property="og:local", content="ja")
-
-  link(rel="image_src", href=_pagePath + "/asset/image/ogp.png")
+  link(rel="image_src", href=_siteOGP)
   link(rel="shortcut icon", href="/favicon.ico")
-  link(
-    rel="apple-touch-icon",
-    href=_pagePath + "/asset/image/apple-touch-icon.png"
-  )
-
-  link(
-    rel="stylesheet",
-    href=_pagePath + "/asset/style/style.css?" + new Date().getTime().toString().substr(0, 9),
-    media="screen"
-  )
-
+  link(rel="apple-touch-icon", href="/asset/image/apple-touch-icon.png")
+  link(rel="stylesheet", href=`${_siteStyle}?${_cacheBuster}`, media="screen")
   link(rel="canonical", href=_permalink)
-
-  script(
-    src=_pagePath + "/asset/script/script.js?" + new Date().getTime().toString().substr(0, 9)
-  )
+  script(src=`${_siteScript}?${_cacheBuster})`)
