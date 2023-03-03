@@ -16,7 +16,7 @@ webpack でも jQuery は使えるのでやりたかったら `npm i jquery` し
 ## development
 
 ```zsh
-ndenv install 16.13.2
+ndenv install 18.13.0
 ndenv rehash
 ```
 
