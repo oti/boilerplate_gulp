@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "boilerplate_gulp",
-  "version": "6.3.1",
+  "version": "6.4.0",
   "description": "web development env boilerplate with gulp",
   "license": "MIT",
   "scripts": {
