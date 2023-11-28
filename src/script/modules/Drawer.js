@@ -32,7 +32,7 @@ export default class Drawer {
         // ブレークポイントが変わったら必ずメニューを閉じる
         this.changeState(false);
       },
-      false
+      false,
     );
 
     this.trap = focusTrap.createFocusTrap("#header", {
@@ -50,7 +50,7 @@ export default class Drawer {
       () => {
         this.changeState(!this.expanded);
       },
-      false
+      false,
     );
 
     window.addEventListener("keydown", this.onKeydownEsc, false);

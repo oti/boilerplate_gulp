@@ -18,6 +18,6 @@ export const script = (_, dest) => {
     .pipe(
       browserSync.reload({
         stream: true,
-      })
+      }),
     );
 };

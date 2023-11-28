@@ -22,12 +22,12 @@ export const html = (src, dest) => {
       pug({
         locals,
         pretty: true,
-      })
+      }),
     )
     .pipe(gulp.dest(dest))
     .pipe(
       browserSync.reload({
         stream: true,
-      })
+      }),
     );
 };

@@ -33,7 +33,7 @@ export default class Tab {
       (event) => {
         this.smp = event.matches;
       },
-      false
+      false,
     );
 
     window.addEventListener(
@@ -45,7 +45,7 @@ export default class Tab {
           this.changeHeight();
         }
       },
-      false
+      false,
     );
 
     //タブのボタン
@@ -56,7 +56,7 @@ export default class Tab {
         if (event.target.getAttribute("aria-selected")) return;
         this.openTab1();
       },
-      false
+      false,
     );
 
     //タブのボタン
@@ -67,7 +67,7 @@ export default class Tab {
         if (event.target.getAttribute("aria-selected")) return;
         this.openTab2();
       },
-      false
+      false,
     );
   }
 

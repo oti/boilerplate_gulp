@@ -31,7 +31,7 @@ export default class AnchorLink {
         this.smp = event.matches;
         this.offset = this.smp ? 0 : 0;
       },
-      false
+      false,
     );
     this.scroll = new SmoothScroll(this.selector, { offset: this.offset });
   }

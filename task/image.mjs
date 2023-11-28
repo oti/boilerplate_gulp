@@ -10,7 +10,7 @@ export const image = (src, dest) => {
     .pipe(
       imagemin([mozjpeg({ quality: 80 }), optipng()], {
         verbose: true,
-      })
+      }),
     )
     .pipe(gulp.dest(dest))
     .pipe(browserSync.stream());

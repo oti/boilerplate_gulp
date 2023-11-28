@@ -15,7 +15,7 @@ export default class InView {
       {
         // 0だと1pxでも画面に入った瞬間に、1だと全て画面に入ったら isInteresting = true になる
         threshold: [0.5],
-      }
+      },
     );
   }
 

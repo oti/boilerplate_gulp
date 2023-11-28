@@ -25,7 +25,7 @@ export default class Disclosure {
         // PC幅になったら全部展開、SP幅になったら全部収納する
         this.changeState(!this.smp);
       },
-      false
+      false,
     );
 
     this.button.addEventListener(
@@ -33,7 +33,7 @@ export default class Disclosure {
       () => {
         this.changeState(!this.expanded);
       },
-      false
+      false,
     );
   }
 

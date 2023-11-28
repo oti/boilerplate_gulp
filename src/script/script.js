@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   document.querySelectorAll(".p-footerNav__icon").forEach((button) => {
     const target = document.querySelector(
-      "#" + button.getAttribute("aria-controls")
+      "#" + button.getAttribute("aria-controls"),
     );
     const disclosure = new Disclosure(button, target);
     disclosure.init();

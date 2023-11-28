@@ -19,18 +19,18 @@ export const style = (src, dest) => {
     .pipe(
       sass({
         outputStyle: "compressed",
-      })
+      }),
     )
     .pipe(
       autoprefixer({
         cascade: false,
-      })
+      }),
     )
     .pipe(csso())
     .pipe(
       gulp.dest(dest, {
         sourcemaps: "./sourcemaps",
-      })
+      }),
     )
     .pipe(browserSync.stream());
 };

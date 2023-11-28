@@ -7,6 +7,6 @@ export const serve = (done, baseDir) => {
         baseDir,
       },
     },
-    done
+    done,
   );
 };
