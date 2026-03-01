@@ -5,18 +5,18 @@ Gulp を使ったウェブサイト開発環境のボイラープレートです
 dependencies の過不足は適宜処理してください。
 
 - HTML -> Pug
-- CSS -> node-sass
+- CSS -> sass
 - Image -> imagemin
 - JS -> Babel + webpack
 
 JS は Babel でコンパイル、webpack でバンドルします。CSS や画像のバンドルはしません。
 
-webpack でも jQuery は使えるのでやりたかったら `npm i jquery` して `import jQuery from "jquery"` したら良いです。
+webpack でも jQuery は使えるのでやりたかったら `npm i -D jquery` して `import { $ } from "jquery"` したら良いです。
 
 ## development
 
 ```zsh
-ndenv install 18.13.0
+ndenv install 24.14.0
 ndenv rehash
 ```
 
@@ -27,15 +27,15 @@ npm start
 
 `localhost:3000` が起動します。
 
-もし `No gulpfule found` エラーが出たら、gulp-cli が v2.3.0 になっていない可能性があります。
+もし `No gulpfule found` エラーが出たら、gulp-cli が v3.1.0 になっていない可能性があります。
 
-package-lock.json を削除してから `npm i` を実行し、gulp-cli をアップデートしてください。
+package-lock.json を削除してから `npm i` を実行すると gulp-cli がアップデートされます。
 
 ```zsh
 npx gulp -v
 
-CLI version: 2.3.0
-Local version: 4.0.2
+CLI version: 3.1.0
+Local version: 5.0.1
 ```
 
 ## build
@@ -44,8 +44,8 @@ Local version: 4.0.2
 npm run build
 ```
 
-`dist/` にビルドされます。
+`src/` の中が `dist/` にビルドされます。
 
-## configration
+## build configration
 
-ソースやビルドのパスは `config.json` で管理しています。
+ソースやビルドのパスは `gulpfile.mjs` に書いてあります。
