@@ -4,7 +4,7 @@
   place-items: center;
   margin: 1em;
   border: 4px solid tomato;
-  height: 100vh;
+  height: calc(100vh - 2rem);
 
   &.-shown {
     border-color: skyblue;

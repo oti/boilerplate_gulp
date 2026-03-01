@@ -1,7 +1,13 @@
+@use "../config/index" as *;
+
 *,
 ::before,
 ::after {
   box-sizing: border-box;
+}
+
+:root {
+  scroll-behavior: smooth;
 }
 
 body {

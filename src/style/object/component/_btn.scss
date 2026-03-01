@@ -1,6 +1,9 @@
+@use "../../config/index" as *;
+
 .c-btn {
   @at-root {
     & {
+      @extend %reset-Button;
     }
   }
 }
