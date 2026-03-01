@@ -12,12 +12,17 @@ html(lang="ja")
   body(class=_class)
     include _partial/analytics
     header.Header
-      h1= _siteName
+      include _partial/header
 
     main.Main
-      .DummyBox(data-inview)
-        p ダミーテキスト
-      .DummyBox(data-inview)
-        p ダミーテキスト
+      .DummyBox#hoge(data-inview)
+        p ダミーテキスト1
+        a(href="#fuga") 次へ
+      .DummyBox#fuga(data-inview)
+        p ダミーテキスト2
+        a(href="#piyo") 次へ
+      .DummyBox#piyo(data-inview)
+        p ダミーテキスト3
+        a(href="#hoge") 最初へ
 
     footer.Footer
