@@ -1,13 +1,13 @@
 import gulp from "gulp";
 import browserSync from "browser-sync";
-import nodeSass from "node-sass";
+import * as dartSass from "sass";
 import gulpSass from "gulp-sass";
-import sassGlob from "gulp-sass-glob";
+import sassGlob from "gulp-sass-glob-use-forward";
 import autoprefixer from "gulp-autoprefixer";
 import csso from "gulp-csso";
 import plumber from "gulp-plumber";
 
-const sass = gulpSass(nodeSass);
+const sass = gulpSass(dartSass);
 
 export const style = (src, dest) => {
   return gulp
