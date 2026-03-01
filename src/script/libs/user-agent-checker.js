@@ -83,13 +83,14 @@ export default function () {
   // Set the results as class names of the html
   var homeClass = function () {
     var classStr = " ";
-    (classStr += _uac.browser !== "" ? _uac.browser + " " : "browser-unknown "),
+    ((classStr +=
+      _uac.browser !== "" ? _uac.browser + " " : "browser-unknown "),
       (classStr += _uac.device !== "" ? _uac.device + " " : "device-unknown "),
       (classStr += _uac.isMobile ? "mobile " : "desktop "),
       (classStr += _uac.isTouch ? "touch " : "mouse "),
       (classStr += _uac.isiOS ? "ios " : ""),
       (classStr += _uac.isIE ? "ie " : ""),
-      (classStr += _uac.isModern ? "modern " : "old ");
+      (classStr += _uac.isModern ? "modern " : "old "));
     return classStr;
   };
 
