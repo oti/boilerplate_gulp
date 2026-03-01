@@ -1,9 +1,12 @@
+@use "sass:map";
+@use "../config/var" as *;
+
 @function c($name) {
-  @return map-get($colors, $name);
+  @return map.get($colors, $name);
 }
 
 @function bp($name) {
-  @return map-get($breakpoints, $name);
+  @return map.get($breakpoints, $name);
 }
 
 // パーツのpxサイズを渡すと1366px幅ベースにおいて%単位にする

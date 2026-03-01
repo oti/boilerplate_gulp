@@ -1,27 +1,24 @@
 @charset 'UTF-8';
 
 // scssコンパイル用メタファイル
-@import "config/var";
-@import "config/placeholder";
-@import "config/mixin";
-@import "config/function";
+@use "config/index";
 
 // 下地
-@import "foundation/font";
-@import "foundation/reset";
-@import "foundation/base";
+@use "foundation/font";
+@use "foundation/reset";
+@use "foundation/base";
 
 // レイアウト
-@import "layout/*";
+@use "layout/*";
 
 // コンポーネント
-@import "object/component/*";
+@use "object/component/*";
 
 // プロジェクト
-@import "object/project/*";
+@use "object/project/*";
 
 // ユーティリティー
-@import "object/utility/*";
+@use "object/utility/*";
 
 // デバッグ用
 // *,*::before,*::after {outline: 2px solid red}
