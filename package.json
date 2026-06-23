@@ -14,14 +14,14 @@
     "no-scroll": "^2.1.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.29.0",
-    "@babel/preset-env": "^7.29.0",
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
     "@prettier/plugin-pug": "^3.4.2",
-    "babel-loader": "^10.0.0",
+    "babel-loader": "^10.1.1",
     "browser-sync": "^3.0.4",
     "gulp": "^5.0.1",
     "gulp-autoprefixer": "^10.0.0",
-    "gulp-babel": "^8.0.0",
+    "gulp-babel": "^8.1.0",
     "gulp-changed": "^5.0.4",
     "gulp-csso": "^4.0.1",
     "gulp-imagemin": "^9.2.0",
